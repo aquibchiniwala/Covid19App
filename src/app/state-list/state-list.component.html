@@ -1,0 +1,35 @@
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<div>
+  <div class="row">
+    <div class="panel panel-primary filterable">
+      <div class="panel-heading">
+        <h3 class="panel-title">Statewise Cases</h3>
+        <div class="pull-right" style="float:right">
+          <button class="btn btn-default btn-xs btn-filter"><span class="glyphicon glyphicon-filter"></span>
+            Filter</button>
+        </div>
+      </div>
+      <table class="table">
+        <thead>
+          <tr class="filters">
+            <th><input type="text" class="form-control" placeholder="State" disabled></th>
+            <th><input type="text" class="form-control" placeholder="Total" disabled></th>
+            <th><input type="text" class="form-control" placeholder="Active" disabled></th>
+            <th><input type="text" class="form-control" placeholder="Recovered" disabled></th>
+            <th><input type="text" class="form-control" placeholder="Deceased" disabled></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor='let state of states'>
+            <td>{{state.name}}</td>
+            <td>{{state.totalCases}}</td>
+            <td>{{state.activeCases}}</td>
+            <td>{{state.recoveredCases}}</td>
+            <td>{{state.deathCases}}</td>
+            <td><button class="btn btn-outline-success mr-4" (click)=getDistrictWiseCases(state.name)>View District Wise</button></td>
+          </tr>
+        </tbody>
+      </table>
+      </div>
+    </div>
+</div>

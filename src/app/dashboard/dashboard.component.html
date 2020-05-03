@@ -1,0 +1,90 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet"
+    integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
+
+<body class="home">
+    <div class="container-fluid display-table">
+        <div class="row display-table-row">
+            <div class="col-md-2 col-sm-1 hidden-xs display-table-cell v-align box" id="navigation">
+                <div class="logo">
+                    <img src="data:image/png;base64,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"
+                        alt="profile-pic" class="hidden-xs hidden-sm"
+                        style="border-radius: 50%;height: 150px;width: 150px;">
+                </div>
+                <div class="navi" *ngIf="user.role==0 || user.role==1">
+                    <ul>
+                        <li class="active"><a [routerLink]="['/dashboard']"><i class="fa fa-pie-chart"
+                                    aria-hidden="true"></i><span class="hidden-xs hidden-sm">Dashboard</span></a></li>
+                        <li><a [routerLink]="['statewise']"><i class="fa fa-line-chart" aria-hidden="true"></i><span
+                                    class="hidden-xs hidden-sm">State Wise List</span></a></li>
+                        <li *ngIf="user.role==1"><a [routerLink]="['addnews']"><i class="fa fa fa-pencil-square-o"
+                                    aria-hidden="true"></i><span class="hidden-xs hidden-sm">Post News</span></a></li>
+                        <li><a [routerLink]="['news']"><i class="fa fa-newspaper-o" aria-hidden="true"></i><span
+                                    class="hidden-xs hidden-sm">List News</span></a></li>
+                        <li><a [routerLink]="['precautions']"><i class="fa fa-newspaper-o" aria-hidden="true"></i><span
+                                class="hidden-xs hidden-sm">Precautions</span></a></li>
+                        <li *ngIf="user.role==1"><a href="#" (click)="logout()"><i class="fa fa-sign-out"
+                                    aria-hidden="true"></i><span class="hidden-xs hidden-sm">Logout</span></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-10 col-sm-11 display-table-cell v-align">
+                <!--<button type="button" class="slide-toggle">Slide Toggle</button> -->
+                <div class="row">
+                    <header>
+                        <div class="col-md-7">
+                            <nav class="navbar-default pull-left">
+                                <div class="navbar-header">
+                                    <button type="button" class="navbar-toggle collapsed" data-toggle="offcanvas"
+                                        data-target="#side-menu" aria-expanded="false">
+                                        <span class="sr-only">Toggle navigation</span>
+                                        <span class="icon-bar"></span>
+                                        <span class="icon-bar"></span>
+                                        <span class="icon-bar"></span>
+                                    </button>
+                                </div>
+                            </nav>
+                        </div>
+                    </header>
+                </div>
+                <div class="user-dashboard">
+                    <h2 style="text-align: center;color: navy;font-weight: bold">Covid - 19 Cases - India </h2>
+                    <div class="container-fluid">
+                        <router-outlet></router-outlet>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+
+    <!-- Modal -->
+    <div id="add_project" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header login-header">
+                    <button type="button" class="close" data-dismiss="modal">×</button>
+                    <h4 class="modal-title">Add Project</h4>
+                </div>
+                <div class="modal-body">
+                    <input type="text" placeholder="Project Title" name="name">
+                    <input type="text" placeholder="Post of Post" name="mail">
+                    <input type="text" placeholder="Author" name="passsword">
+                    <textarea placeholder="Desicrption"></textarea>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="cancel" data-dismiss="modal">Close</button>
+                    <button type="button" class="add-project" data-dismiss="modal">Save</button>
+                </div>
+            </div>
+
+        </div>
+    </div>

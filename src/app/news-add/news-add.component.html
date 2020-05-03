@@ -1,0 +1,52 @@
+<div class="signup-form">
+  <form #f="ngForm" (ngSubmit)="f.form.valid && onSubmit()" [mustMatch]="['Password', 'ConfirmPassword']" novalidate>
+    <h2>News</h2>
+    <p class="hint-text">Add News for Covid 19</p>
+
+
+    <div class="form-group">
+      <div><input type="text" class="form-control" name="title" placeholder="title"
+          [(ngModel)]="model.title" #title="ngModel"
+          [ngClass]="{ 'is-invalid': f.submitted && title.invalid }" required />
+        <div *ngIf="f.submitted && title.invalid" class="invalid-feedback">
+          <div *ngIf="title.errors.required">Title is required</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <div><input type="text" class="form-control" name="description" placeholder="description"
+          [(ngModel)]="model.description" #description="ngModel"
+          [ngClass]="{ 'is-invalid': f.submitted && description.invalid }" required />
+        <div *ngIf="f.submitted && description.invalid" class="invalid-feedback">
+          <div *ngIf="description.errors.required">Description is required</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <div><input type="text" class="form-control" name="summary" placeholder="summary"
+          [(ngModel)]="model.summary" #summary="ngModel"
+          [ngClass]="{ 'is-invalid': f.submitted && summary.invalid }" required />
+        <div *ngIf="f.submitted && summary.invalid" class="invalid-feedback">
+          <div *ngIf="summary.errors.required">Summary is required</div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="form-group">
+      <div><textarea  rows="4" cols="50" style="height:150px" class="form-control" name="fullNews" placeholder="Full News"
+          [(ngModel)]="model.fullNews" #fullNews="ngModel" [ngClass]="{ 'is-invalid': f.submitted && fullNews.invalid }"
+          required ></textarea>
+        <div *ngIf="f.submitted && fullNews.invalid" class="invalid-feedback">
+          <div *ngIf="fullNews.errors.required">Full News is required</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <button type="submit" class="btn btn-success btn-lg btn-block">Post News</button>
+    </div>
+  </form>
+</div>

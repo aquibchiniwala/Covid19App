@@ -1,0 +1,22 @@
+<div>
+  <div style="width: 900px; height: 60px; margin-bottom: 20px; border: 1px black solid;">
+    <h3><b>
+      <span style="margin-left: 40px; color:red">Total : {{totalCases}}</span>
+      <span style="margin-left: 40px; color:blue">Active : {{activeCases}}</span>
+      <span style="margin-left: 40px; color:green">Recovered : {{recoveredCases}}</span>
+      <span style="margin-left: 40px; color:orange">Deaths : {{deathCases}}</span>
+    </b></h3>
+  </div>
+  <!-- <div>
+    <h4 style="text-align: center;color: black;font-weight: bold">Total Cases</h4>
+    <canvas baseChart [data]="countryPieChartData" [labels]="countryPieChartLabels" [chartType]="pieChartType"
+      *ngIf="countryPieChartData.length>0"></canvas>
+
+  </div> -->
+  <div>
+    <h4 style="text-align: center;color: black;font-weight: bold">Statewise Cases</h4>
+    <canvas baseChart [data]="statePieChartData" [labels]="statePieChartLabels" [chartType]="pieChartType"
+      *ngIf="statePieChartData.length>0"></canvas>
+
+  </div>
+</div>

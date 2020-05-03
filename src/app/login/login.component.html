@@ -1,0 +1,57 @@
+<div class="body-container">
+  <div class="container">
+    <div class="d-flex justify-content-center h-100">
+      <div class="card">
+        <div class="card-header">
+          <h3>Sign In</h3>
+          <div class="d-flex justify-content-end social_icon">
+            <span><i class="fab fa-facebook-square"></i></span>
+            <span><i class="fab fa-google-plus-square"></i></span>
+            <span><i class="fab fa-twitter-square"></i></span>
+          </div>
+        </div>
+        <div class="card-body">
+          <div class="alert alert-danger" role="alert" *ngIf="username?.touched && username?.errors?.required">
+            Please enter email.
+          </div>
+          <div class="alert alert-danger" role="alert" *ngIf="password?.touched && password?.errors?.required">
+              Please enter password.
+            </div>
+          <div class="alert alert-danger" role="alert" *ngIf="loggedIn==false">
+            Email and password doesn't match.
+          </div>
+          <form #f="ngForm" (ngSubmit)="f.form.valid && onSubmit(f)">
+            <div class="input-group form-group">
+              <div class="input-group-prepend">
+                <span class="input-group-text"><i class="fas fa-user"></i></span>
+              </div>
+              <input type="text" name="username" class="form-control" placeholder="Email" [(ngModel)]="model.username"
+                #username="ngModel" [ngClass]="{ 'is-invalid': f.submitted && username.touched && username?.invalid }"
+                required />
+
+            </div>
+            <div class="input-group form-group">
+              <div class="input-group-prepend">
+                <span class="input-group-text"><i class="fas fa-key"></i></span>
+              </div>
+              <input type="password" name="password" class="form-control" placeholder="password"
+                [(ngModel)]="model.password" #password="ngModel"
+                [ngClass]="{ 'is-invalid': f.submitted && password.touched && password?.invalid }" required />
+            </div>
+            <div class="row align-items-center remember">
+              <input type="checkbox" name="rememberMe" [(ngModel)]="model.rememberMe" #rememberMe="ngModel">Remember Me
+            </div>
+            <div class="form-group">
+              <input type="submit" value="Login" class="btn float-right login_btn">
+            </div>
+          </form>
+        </div>
+        <div class="card-footer">
+          <div class="d-flex justify-content-center">
+            <a href="#">Forgot your password?</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
